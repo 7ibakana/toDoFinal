@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,11 +20,11 @@ namespace toDoFinal
 
         private void btnAddToDo_Click(object sender, EventArgs e)
         {
-            SetUrgencyForm urgency = new SetUrgencyForm();
-            urgency.ShowDialog();
             //Remove any spaces start and end of string
             string todoText = txtNewToDo.Text;
-            if (!String.IsNullOrWhiteSpace(todoText, urgent))
+            SetUrgencyForm urgent = new SetUrgencyForm(todoText);
+            urgent.ShowDialog();
+            if (!String.IsNullOrWhiteSpace(todoText))
             {
                 //Create new toDoFinal object using a constructor
                 ToDo toDoItem = new ToDo(todoText);
@@ -68,16 +69,7 @@ namespace toDoFinal
             {
                 clsToDo.Items.Remove(item); //Remove by value
                 lstUrgent.Items.Add(item);
-            }
-        }
-        private bool itemIsInList(CheckedListBox.ObjectCollection items, string newItem)
-        {
-            foreach (string item in items)
-            {
-                if (item.ToUpper() == newItem.ToUpper())
-                {
-                    return true;
-                }
+            
             }
         }
     }

@@ -57,6 +57,7 @@
             this.btnAddWithDueDate.TabIndex = 2;
             this.btnAddWithDueDate.Text = "Add item";
             this.btnAddWithDueDate.UseVisualStyleBackColor = true;
+            this.btnAddWithDueDate.Click += new System.EventHandler(this.btnAddWithDueDate_Click);
             // 
             // SetUrgencyForm
             // 

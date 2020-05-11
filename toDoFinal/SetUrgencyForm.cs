@@ -11,17 +11,33 @@ using System.Windows.Forms;
 namespace toDoFinal
 {
     public partial class SetUrgencyForm : Form
-        SortedList<string[]>urgencyDate;
     {
-        public SetUrgencyForm()
+        public SetUrgencyForm(string myString)
         {
             InitializeComponent();
+            label1.Text = $"When is {myString} due?";  
         }
 
-        public void SetUrgencyForm_Load(object sender, EventArgs e)
+        private void btnAddWithDueDate_Click(object sender, EventArgs e)
         {
-            urgencyDate = new SortedList,< string[] >
-            string[] = DateTime;
+            if(urgent = urgent.AddDays(+4))
+            {
+                lstUrgent.Items.Add(todoItem);
+            }
+            else
+            {
+                clsToDo.Items.Add(todoItem);
+            }
+        }
+
+        private void SetUrgencyForm_Load(object sender, EventArgs e)
+        {
+            DateTime today = DateTime.Today;
+            dteDue.Text = $"{today:d}";
+        }
+        public string urgent(string SetUrgencyForm, string ToDoManagerForm)
+        {
+            DateTimePicker urgent = DateTimePicker.dteDue;
         }
     }
 }

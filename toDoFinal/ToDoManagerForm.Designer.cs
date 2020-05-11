@@ -31,13 +31,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.clsToDo = new System.Windows.Forms.CheckedListBox();
-            this.lstUrgent = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.listDone = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNewToDo = new System.Windows.Forms.TextBox();
             this.btnAddToDo = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.lstUrgent = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -65,14 +65,6 @@
             this.clsToDo.Name = "clsToDo";
             this.clsToDo.Size = new System.Drawing.Size(120, 94);
             this.clsToDo.TabIndex = 2;
-            // 
-            // lstUrgent
-            // 
-            this.lstUrgent.FormattingEnabled = true;
-            this.lstUrgent.Location = new System.Drawing.Point(178, 61);
-            this.lstUrgent.Name = "lstUrgent";
-            this.lstUrgent.Size = new System.Drawing.Size(120, 95);
-            this.lstUrgent.TabIndex = 3;
             // 
             // label3
             // 
@@ -127,6 +119,14 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // lstUrgent
+            // 
+            this.lstUrgent.FormattingEnabled = true;
+            this.lstUrgent.Location = new System.Drawing.Point(178, 61);
+            this.lstUrgent.Name = "lstUrgent";
+            this.lstUrgent.Size = new System.Drawing.Size(120, 95);
+            this.lstUrgent.TabIndex = 3;
+            // 
             // ToDoManagerForm
             // 
             this.AcceptButton = this.btnAddToDo;
@@ -155,12 +155,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckedListBox clsToDo;
-        private System.Windows.Forms.ListBox lstUrgent;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ListBox listDone;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNewToDo;
         private System.Windows.Forms.Button btnAddToDo;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.ListBox lstUrgent;
     }
 }
