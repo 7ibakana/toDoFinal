@@ -17,6 +17,7 @@ namespace toDoFinal
         public string Text { get; set; }
         //Another auto property, c# creates an urgent field
         public bool Urgent { get; set; }
+        public DateTime DateDue { get; set; }
         //Another property with an initial value
         public DateTime DateCreated { get; set; } = DateTime.Now;
         public override string ToString()

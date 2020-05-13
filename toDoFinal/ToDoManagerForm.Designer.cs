@@ -38,6 +38,7 @@
             this.btnAddToDo = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.lstUrgent = new System.Windows.Forms.ListBox();
+            this.chkUrgency = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -52,7 +53,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(175, 39);
+            this.label2.Location = new System.Drawing.Point(259, 39);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 1;
@@ -80,7 +81,7 @@
             this.listDone.FormattingEnabled = true;
             this.listDone.Location = new System.Drawing.Point(19, 213);
             this.listDone.Name = "listDone";
-            this.listDone.Size = new System.Drawing.Size(286, 56);
+            this.listDone.Size = new System.Drawing.Size(279, 56);
             this.listDone.TabIndex = 5;
             // 
             // label4
@@ -101,7 +102,7 @@
             // 
             // btnAddToDo
             // 
-            this.btnAddToDo.Location = new System.Drawing.Point(223, 7);
+            this.btnAddToDo.Location = new System.Drawing.Point(302, 8);
             this.btnAddToDo.Name = "btnAddToDo";
             this.btnAddToDo.Size = new System.Drawing.Size(75, 23);
             this.btnAddToDo.TabIndex = 8;
@@ -122,17 +123,28 @@
             // lstUrgent
             // 
             this.lstUrgent.FormattingEnabled = true;
-            this.lstUrgent.Location = new System.Drawing.Point(178, 61);
+            this.lstUrgent.Location = new System.Drawing.Point(262, 61);
             this.lstUrgent.Name = "lstUrgent";
             this.lstUrgent.Size = new System.Drawing.Size(120, 95);
             this.lstUrgent.TabIndex = 3;
+            // 
+            // chkUrgency
+            // 
+            this.chkUrgency.AutoSize = true;
+            this.chkUrgency.Location = new System.Drawing.Point(199, 12);
+            this.chkUrgency.Name = "chkUrgency";
+            this.chkUrgency.Size = new System.Drawing.Size(97, 17);
+            this.chkUrgency.TabIndex = 11;
+            this.chkUrgency.Text = "High Urgency?";
+            this.chkUrgency.UseVisualStyleBackColor = true;
             // 
             // ToDoManagerForm
             // 
             this.AcceptButton = this.btnAddToDo;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 281);
+            this.ClientSize = new System.Drawing.Size(455, 281);
+            this.Controls.Add(this.chkUrgency);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAddToDo);
             this.Controls.Add(this.txtNewToDo);
@@ -162,5 +174,6 @@
         private System.Windows.Forms.Button btnAddToDo;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.ListBox lstUrgent;
+        private System.Windows.Forms.CheckBox chkUrgency;
     }
 }

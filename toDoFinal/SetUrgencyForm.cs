@@ -12,21 +12,26 @@ namespace toDoFinal
 {
     public partial class SetUrgencyForm : Form
     {
+        private object urgency;
+        private object urgent;
+        private object clsToDo;
+
         public SetUrgencyForm(string myString)
         {
             InitializeComponent();
-            label1.Text = $"When is {myString} due?";  
+            label2.Text = myString;
+
         }
 
         private void btnAddWithDueDate_Click(object sender, EventArgs e)
         {
-            if(urgent = urgent.AddDays(+4))
+            foreach (DateDue in SetUrgencyForm)
             {
-                lstUrgent.Items.Add(toDoItem);
+                urgent.Add(urgentItemInList);
             }
-            else
+            foreach (urgent)
             {
-                clsToDo.Items.Add(toDoItem);
+                clsToDo.Add(urgentItemInList);
             }
         }
 
@@ -35,9 +40,16 @@ namespace toDoFinal
             DateTime today = DateTime.Today;
             dteDue.Text = $"{today:d}";
         }
-        public string urgent(string SetUrgencyForm, string ToDoManagerForm)
+        private bool DateDue(SetUrgencyForm Date)
         {
-            DateTimePicker urgent = DateTimePicker.dteDue;
+            foreach (DateTime in dteDue.Day)
+            {
+                if (dteDue.Value.AddDays(+4))
+                {
+                    return true;
+                }
+            }
+            
         }
     }
 }

@@ -22,12 +22,14 @@ namespace toDoFinal
         {
             //Remove any spaces start and end of string
             string todoText = txtNewToDo.Text;
+            //Used the ShowDialog method to access the urgent form and set up a new instance of the form
             SetUrgencyForm urgent = new SetUrgencyForm(todoText);
             urgent.ShowDialog();
+            bool urgency = chkUrgency.Checked;
             if (!String.IsNullOrWhiteSpace(todoText))
             {
                 //Create new toDoFinal object using a constructor
-                ToDo toDoItem = new ToDo(todoText);
+                ToDo toDoItem = new ToDo(todoText,urgency);
                 if (!ToDoItemInList(toDoItem))
                 {
                     clsToDo.Items.Add(toDoItem);
@@ -40,6 +42,12 @@ namespace toDoFinal
                 }
             }
         }
+
+        private bool ToDoItemInList(ToDo toDoItem)
+        {
+            throw new NotImplementedException();
+        }
+
         private bool ToDoItemInList(ToDoManagerForm toDoItem)
         {
             foreach (ToDo ListItem in clsToDo.Items)
