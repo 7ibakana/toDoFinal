@@ -16,7 +16,7 @@ namespace toDoFinal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new toDoManagerForm());
+            Application.Run(new ToDoManagerForm());
         }
     }
 }

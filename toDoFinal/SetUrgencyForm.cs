@@ -22,11 +22,11 @@ namespace toDoFinal
         {
             if(urgent = urgent.AddDays(+4))
             {
-                lstUrgent.Items.Add(todoItem);
+                lstUrgent.Items.Add(toDoItem);
             }
             else
             {
-                clsToDo.Items.Add(todoItem);
+                clsToDo.Items.Add(toDoItem);
             }
         }
 
