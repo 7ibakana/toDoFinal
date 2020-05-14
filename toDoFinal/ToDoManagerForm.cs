@@ -70,7 +70,11 @@ namespace toDoFinal
             {
                 doneItems.Add(item);
             }
-            //For each string in doneItems list, remove from clsToDo.Items
+            foreach (ToDo item in lstUrgent.CheckedItems)
+            {
+                doneItems.Add(item);
+            }
+            //For each string in doneItems list, remove from clsToDo.Items, or lstUrgent
             //Add to lstUrgent.items
             foreach (ToDo item in doneItems)
             {

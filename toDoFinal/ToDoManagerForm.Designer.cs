@@ -37,8 +37,8 @@
             this.txtNewToDo = new System.Windows.Forms.TextBox();
             this.btnAddToDo = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.lstUrgent = new System.Windows.Forms.ListBox();
             this.chkUrgency = new System.Windows.Forms.CheckBox();
+            this.lstUrgent = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -120,14 +120,6 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // lstUrgent
-            // 
-            this.lstUrgent.FormattingEnabled = true;
-            this.lstUrgent.Location = new System.Drawing.Point(262, 61);
-            this.lstUrgent.Name = "lstUrgent";
-            this.lstUrgent.Size = new System.Drawing.Size(120, 95);
-            this.lstUrgent.TabIndex = 3;
-            // 
             // chkUrgency
             // 
             this.chkUrgency.AutoSize = true;
@@ -138,12 +130,21 @@
             this.chkUrgency.Text = "High Urgency?";
             this.chkUrgency.UseVisualStyleBackColor = true;
             // 
+            // lstUrgent
+            // 
+            this.lstUrgent.FormattingEnabled = true;
+            this.lstUrgent.Location = new System.Drawing.Point(262, 55);
+            this.lstUrgent.Name = "lstUrgent";
+            this.lstUrgent.Size = new System.Drawing.Size(120, 94);
+            this.lstUrgent.TabIndex = 12;
+            // 
             // ToDoManagerForm
             // 
             this.AcceptButton = this.btnAddToDo;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(455, 281);
+            this.Controls.Add(this.lstUrgent);
             this.Controls.Add(this.chkUrgency);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAddToDo);
@@ -151,7 +152,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.listDone);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.lstUrgent);
             this.Controls.Add(this.clsToDo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -173,7 +173,7 @@
         private System.Windows.Forms.TextBox txtNewToDo;
         private System.Windows.Forms.Button btnAddToDo;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.ListBox lstUrgent;
         private System.Windows.Forms.CheckBox chkUrgency;
+        private System.Windows.Forms.CheckedListBox lstUrgent;
     }
 }
