@@ -29,7 +29,7 @@ namespace toDoFinal
                 DateTime dateDue = DateTime.Parse(dteDue.Text);
                 if (dateDue <= DateTime.Today)
                 {
-                    throw new FormatException("Due date Must be in the future");
+                    throw new FormatException("No stress, but this is due today. You got this!");
                 }
 
             }

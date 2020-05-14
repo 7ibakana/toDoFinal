@@ -39,6 +39,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.chkUrgency = new System.Windows.Forms.CheckBox();
             this.lstUrgent = new System.Windows.Forms.CheckedListBox();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -65,7 +66,7 @@
             this.clsToDo.Location = new System.Drawing.Point(19, 61);
             this.clsToDo.Name = "clsToDo";
             this.clsToDo.Size = new System.Drawing.Size(428, 94);
-            this.clsToDo.TabIndex = 2;
+            this.clsToDo.TabIndex = 3;
             // 
             // label3
             // 
@@ -82,7 +83,7 @@
             this.listDone.Location = new System.Drawing.Point(25, 335);
             this.listDone.Name = "listDone";
             this.listDone.Size = new System.Drawing.Size(422, 56);
-            this.listDone.TabIndex = 5;
+            this.listDone.TabIndex = 7;
             // 
             // label4
             // 
@@ -98,24 +99,24 @@
             this.txtNewToDo.Location = new System.Drawing.Point(93, 10);
             this.txtNewToDo.Name = "txtNewToDo";
             this.txtNewToDo.Size = new System.Drawing.Size(100, 20);
-            this.txtNewToDo.TabIndex = 7;
+            this.txtNewToDo.TabIndex = 0;
             // 
             // btnAddToDo
             // 
             this.btnAddToDo.Location = new System.Drawing.Point(302, 8);
             this.btnAddToDo.Name = "btnAddToDo";
             this.btnAddToDo.Size = new System.Drawing.Size(75, 23);
-            this.btnAddToDo.TabIndex = 8;
+            this.btnAddToDo.TabIndex = 2;
             this.btnAddToDo.Text = "A&dd";
             this.btnAddToDo.UseVisualStyleBackColor = true;
             this.btnAddToDo.Click += new System.EventHandler(this.btnAddToDo_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(284, 293);
+            this.btnDelete.Location = new System.Drawing.Point(302, 287);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(120, 23);
-            this.btnDelete.TabIndex = 9;
+            this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Delete checked items";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -123,10 +124,11 @@
             // chkUrgency
             // 
             this.chkUrgency.AutoSize = true;
+            this.chkUrgency.ForeColor = System.Drawing.Color.DarkRed;
             this.chkUrgency.Location = new System.Drawing.Point(199, 12);
             this.chkUrgency.Name = "chkUrgency";
             this.chkUrgency.Size = new System.Drawing.Size(97, 17);
-            this.chkUrgency.TabIndex = 11;
+            this.chkUrgency.TabIndex = 1;
             this.chkUrgency.Text = "High Urgency?";
             this.chkUrgency.UseVisualStyleBackColor = true;
             // 
@@ -136,14 +138,28 @@
             this.lstUrgent.Location = new System.Drawing.Point(25, 187);
             this.lstUrgent.Name = "lstUrgent";
             this.lstUrgent.Size = new System.Drawing.Size(422, 94);
-            this.lstUrgent.TabIndex = 12;
+            this.lstUrgent.TabIndex = 4;
+            // 
+            // btnClose
+            // 
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.Location = new System.Drawing.Point(302, 406);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(107, 23);
+            this.btnClose.TabIndex = 6;
+            this.btnClose.Text = "Close window";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // ToDoManagerForm
             // 
             this.AcceptButton = this.btnAddToDo;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 428);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.CancelButton = this.btnClose;
+            this.ClientSize = new System.Drawing.Size(472, 452);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lstUrgent);
             this.Controls.Add(this.chkUrgency);
             this.Controls.Add(this.btnDelete);
@@ -175,5 +191,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.CheckBox chkUrgency;
         private System.Windows.Forms.CheckedListBox lstUrgent;
+        private System.Windows.Forms.Button btnClose;
     }
 }

@@ -16,6 +16,7 @@ namespace toDoFinal
         public ToDoManagerForm()
         {
             InitializeComponent();
+            this.ActiveControl = txtNewToDo;
         }
 
         private void btnAddToDo_Click(object sender, EventArgs e)
@@ -33,10 +34,11 @@ namespace toDoFinal
                 //Create new toDoFinal object using a constructor0 
                 ToDo toDoItem = new ToDo(todoText, urgency);
                 toDoItem.DateDue = dueDate;
-                if (toDoItem.Urgent || toDoItem.DateDue.Date == DateTime.Today);
+                if (toDoItem.Urgent || toDoItem.DateDue.Date == DateTime.Today)
                 {
                     //Add to urgent list
                     lstUrgent.Items.Add(toDoItem);
+                    txtNewToDo.Text = ""; //Clear text
                 }
                 else
                 {
@@ -86,10 +88,16 @@ namespace toDoFinal
             //Add to lstUrgent.items
             foreach (ToDo item in doneItems)
             {
-                clsToDo.Items.Remove(item); //Remove by value
-                listDone.Items.Add(item);
+                clsToDo.Items.Remove(item); //Remove by value from class list
+                lstUrgent.Items.Remove(item); //Remove by value from urgent list
+                listDone.Items.Add(item); //Add removed values to Done list
             
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();//Closes program
         }
     }
 }
