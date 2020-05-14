@@ -11,7 +11,7 @@ namespace toDoFinal
     {
         public ToDo(string text, bool urgent)
         {
-            Text = Text; //set the Text property
+            Text = text; //set the Text property
             Urgent = urgent; //set the Urgent property
         }
         //A property, text, c# creates a text field to store data
@@ -23,7 +23,7 @@ namespace toDoFinal
         public DateTime DateCreated { get; set; } = DateTime.Now;
         public override string ToString()
         {
-            string displayText = $"{Text} - Created on {DateCreated:f}";
+            string displayText = $"{Text} - Created on {DateCreated:f} - Due {DateDue}";
             if (Urgent)
             {
                 displayText += "URGENT!";

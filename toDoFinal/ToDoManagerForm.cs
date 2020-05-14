@@ -33,14 +33,22 @@ namespace toDoFinal
                 //Create new toDoFinal object using a constructor0 
                 ToDo toDoItem = new ToDo(todoText, urgency);
                 toDoItem.DateDue = dueDate;
-                if (!ToDoItemInList(toDoItem))
+                if (toDoItem.Urgent || toDoItem.DateDue.Date == DateTime.Today);
                 {
-                    clsToDo.Items.Add(toDoItem);
-                    txtNewToDo.Text = ""; //Clear text
+                    //Add to urgent list
+                    lstUrgent.Items.Add(toDoItem);
                 }
                 else
                 {
-                    MessageBox.Show("You already added that", "Duplicate");
+                    if (!ToDoItemInList(toDoItem))
+                    {
+                        clsToDo.Items.Add(toDoItem);
+                        txtNewToDo.Text = ""; //Clear text
+                    }
+                    else
+                    {
+                        MessageBox.Show("You already added that", "Duplicate");
+                    }
                 }
             }
 

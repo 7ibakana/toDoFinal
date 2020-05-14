@@ -46,7 +46,8 @@ namespace toDoFinal
         {
             //Sets the the dteDue do today's date, formatted as MM/DD/YYYY
             DateTime today = DateTime.Today;
-            dteDue.Text = $"{today:d}";
+            dteDue.Value = today; //set current date to today
+            dteDue.MinDate = today;
         }
 
     }
