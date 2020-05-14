@@ -22,7 +22,7 @@ namespace toDoFinal
 
         private void btnAddWithDueDate_Click(object sender, EventArgs e)
         { 
-            //Conversion of any text to DateTime and throwws a FormatException if the date can't be parsed
+            //Conversion of any text to DateTime and throws a FormatException if the date can't be parsed
             try
             {
                 //Makes sure the date is not today or in the past
@@ -48,5 +48,6 @@ namespace toDoFinal
             DateTime today = DateTime.Today;
             dteDue.Text = $"{today:d}";
         }
+
     }
 }

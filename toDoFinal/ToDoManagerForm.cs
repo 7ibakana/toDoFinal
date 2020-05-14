@@ -31,7 +31,7 @@ namespace toDoFinal
             if (!String.IsNullOrWhiteSpace(todoText))
             {
                 //Create new toDoFinal object using a constructor0 
-                ToDo toDoItem = new ToDo(todoText,urgency);
+                ToDo toDoItem = new ToDo(todoText, urgency);
                 toDoItem.DateDue = dueDate;
                 if (!ToDoItemInList(toDoItem))
                 {
@@ -41,13 +41,12 @@ namespace toDoFinal
                 else
                 {
                     MessageBox.Show("You already added that", "Duplicate");
-
                 }
             }
 
         }
 
-        private bool ToDoItemInList(ToDoManagerForm toDoItem)
+        private bool ToDoItemInList(ToDo toDoItem)
         {
             foreach (ToDo ListItem in clsToDo.Items)
             {
@@ -55,6 +54,7 @@ namespace toDoFinal
                 {
                     return true; //This list item has the same text as toDoItem
                 }
+                continue;
             }
             //If the end of the loop is reached without returning,
             //an item with the same text is not in the list. Return false
@@ -79,7 +79,7 @@ namespace toDoFinal
             foreach (ToDo item in doneItems)
             {
                 clsToDo.Items.Remove(item); //Remove by value
-                lstUrgent.Items.Add(item);
+                listDone.Items.Add(item);
             
             }
         }

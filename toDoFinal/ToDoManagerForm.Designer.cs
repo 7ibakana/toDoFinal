@@ -53,7 +53,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(259, 39);
+            this.label2.Location = new System.Drawing.Point(22, 171);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 1;
@@ -64,13 +64,13 @@
             this.clsToDo.FormattingEnabled = true;
             this.clsToDo.Location = new System.Drawing.Point(19, 61);
             this.clsToDo.Name = "clsToDo";
-            this.clsToDo.Size = new System.Drawing.Size(120, 94);
+            this.clsToDo.Size = new System.Drawing.Size(428, 94);
             this.clsToDo.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 197);
+            this.label3.Location = new System.Drawing.Point(22, 303);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 13);
             this.label3.TabIndex = 4;
@@ -79,9 +79,9 @@
             // listDone
             // 
             this.listDone.FormattingEnabled = true;
-            this.listDone.Location = new System.Drawing.Point(19, 213);
+            this.listDone.Location = new System.Drawing.Point(25, 335);
             this.listDone.Name = "listDone";
-            this.listDone.Size = new System.Drawing.Size(279, 56);
+            this.listDone.Size = new System.Drawing.Size(422, 56);
             this.listDone.TabIndex = 5;
             // 
             // label4
@@ -112,7 +112,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(19, 162);
+            this.btnDelete.Location = new System.Drawing.Point(284, 293);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(120, 23);
             this.btnDelete.TabIndex = 9;
@@ -133,9 +133,9 @@
             // lstUrgent
             // 
             this.lstUrgent.FormattingEnabled = true;
-            this.lstUrgent.Location = new System.Drawing.Point(262, 55);
+            this.lstUrgent.Location = new System.Drawing.Point(25, 187);
             this.lstUrgent.Name = "lstUrgent";
-            this.lstUrgent.Size = new System.Drawing.Size(120, 94);
+            this.lstUrgent.Size = new System.Drawing.Size(422, 94);
             this.lstUrgent.TabIndex = 12;
             // 
             // ToDoManagerForm
@@ -143,7 +143,7 @@
             this.AcceptButton = this.btnAddToDo;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 281);
+            this.ClientSize = new System.Drawing.Size(475, 428);
             this.Controls.Add(this.lstUrgent);
             this.Controls.Add(this.chkUrgency);
             this.Controls.Add(this.btnDelete);
