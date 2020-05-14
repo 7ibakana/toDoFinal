@@ -25,11 +25,14 @@ namespace toDoFinal
             //Used the ShowDialog method to access the urgent form and set up a new instance of the form
             SetUrgencyForm urgent = new SetUrgencyForm(todoText);
             urgent.ShowDialog();
+            DateTime dueDate = (DateTime)urgent.Tag;
+            MessageBox.Show(dueDate.ToString());
             bool urgency = chkUrgency.Checked;
             if (!String.IsNullOrWhiteSpace(todoText))
             {
-                //Create new toDoFinal object using a constructor
+                //Create new toDoFinal object using a constructor0 
                 ToDo toDoItem = new ToDo(todoText,urgency);
+                toDoItem.DateDue = dueDate;
                 if (!ToDoItemInList(toDoItem))
                 {
                     clsToDo.Items.Add(toDoItem);
@@ -41,11 +44,7 @@ namespace toDoFinal
 
                 }
             }
-        }
 
-        private bool ToDoItemInList(ToDo toDoItem)
-        {
-            throw new NotImplementedException();
         }
 
         private bool ToDoItemInList(ToDoManagerForm toDoItem)

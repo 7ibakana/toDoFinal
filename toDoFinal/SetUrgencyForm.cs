@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,10 +13,6 @@ namespace toDoFinal
 {
     public partial class SetUrgencyForm : Form
     {
-        private object urgency;
-        private object urgent;
-        private object clsToDo;
-
         public SetUrgencyForm(string myString)
         {
             InitializeComponent();
@@ -24,32 +21,32 @@ namespace toDoFinal
         }
 
         private void btnAddWithDueDate_Click(object sender, EventArgs e)
-        {
-            foreach (DateDue in SetUrgencyForm)
+        { 
+            //Conversion of any text to DateTime and throwws a FormatException if the date can't be parsed
+            try
             {
-                urgent.Add(urgentItemInList);
+                //Makes sure the date is not today or in the past
+                DateTime dateDue = DateTime.Parse(dteDue.Text);
+                if (dateDue <= DateTime.Today)
+                {
+                    throw new FormatException("Due date Must be in the future");
+                }
+
             }
-            foreach (urgent)
+            //A catch that handles all the different types of error
+            catch (FormatException error)
             {
-                clsToDo.Add(urgentItemInList);
+                MessageBox.Show(error.Message, "Invalid date");
             }
+            Tag = dteDue.Value; //tags the value of the dteDue to and then closes it
+            Close();
         }
 
         private void SetUrgencyForm_Load(object sender, EventArgs e)
         {
+            //Sets the the dteDue do today's date, formatted as MM/DD/YYYY
             DateTime today = DateTime.Today;
             dteDue.Text = $"{today:d}";
-        }
-        private bool DateDue(SetUrgencyForm Date)
-        {
-            foreach (DateTime in dteDue.Day)
-            {
-                if (dteDue.Value.AddDays(+4))
-                {
-                    return true;
-                }
-            }
-            
         }
     }
 }
